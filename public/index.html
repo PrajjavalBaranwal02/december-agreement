@@ -71,18 +71,38 @@
     <p class="tiny-disclaimer">A playful personal agreement, not a legal contract. Consent is optional and can be declined.</p>
   </main>
 
-  <div class="modal-backdrop" id="consentModal" aria-hidden="true">
-    <section class="consent-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
-      <div class="modal-star">✦</div>
-      <p class="eyebrow">ONE LAST FORMALITY</p>
-      <h2 id="modalTitle">Vaishu, do you agree?</h2>
-      <p>Do you willingly agree to reserve your 11th December for this very enthusiastic person, a little adventure, good food, and a whole lot of memories?</p>
-      <p class="modal-small">You are free to say no. The legal department may be dramatic, but it respects your choice. ❤️</p>
-      <button class="primary-btn accept-btn" id="acceptBtn" type="button">YES, I ACCEPT ❤️</button>
-      <button class="decline-btn" id="declineBtn" type="button">I NEED TO THINK (suspicious behaviour)</button>
+  
+  <!-- Think Again Popup -->
+  <div class="modal-backdrop" id="thinkAgainModal" aria-hidden="true">
+    <section class="consent-modal think-again-modal" role="dialog" aria-modal="true">
+      <div class="modal-star">🥺</div>
+      <p class="eyebrow">WAIT A MINUTE...</p>
+      <h2>Are you really sure?</h2>
+
+      <p>
+        Think again, Vaishu! There's an adventure waiting,
+        food waiting, and someone very excited to spend
+        the day with you. ❤️
+      </p>
+
+      <p class="modal-small">
+        The committee strongly recommends reconsideration.
+      </p>
+
+      <button class="primary-btn accept-btn" id="yesImInBtn" type="button">
+        YES, I'M IN ❤️
+      </button>
+
+      <button class="primary-btn accept-btn second-yes-btn" id="yesObviouslyBtn" type="button">
+        YES, OBVIOUSLY! 💖
+      </button>
+
+      <button class="celebration-close" id="notNowBtn" type="button">
+        NO, NOT NOW
+      </button>
     </section>
   </div>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
